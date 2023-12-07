@@ -1,15 +1,14 @@
 import Item from "@/components/items/Item";
-import Layout from "@/components/layout/Layout";
 import { ItemType } from "@/types/ItemType";
+import Image from 'next/image';
 
 export default function Index() {
-    import Image from 'next/image'; // Import the Image component from Next.js
-
     const item: ItemType = {
         id: 0,
         name: "sample",
         status: "sold",
         url: "",
+        price: 200,
     };
 
     return (

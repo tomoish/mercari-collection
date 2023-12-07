@@ -5,86 +5,86 @@ import { ItemType } from "@/types/ItemType";
 export default function Index() {
     const item: ItemType = {
         id: 0,
-        name: "コナン100巻",
+        name: "乃木コレ7",
         status: "sold",
-        url: "images/乃木コレ7.jpg",
+        url: "/images/乃木コレ7.jpg",
         price: 200,
     };
     const item2: ItemType = {
       id: 0,
-      name: "コナン100巻",
+      name: "乃木コレ8",
       status: "hold",
-      url: "images/乃木コレ8.jpg",
+      url: "/images/乃木コレ8.jpg",
       price: 200,
     };
     const item3: ItemType = {
       id: 0,
-      name: "コナン100巻",
+      name: "乃木コレ9",
       status: "hold",
-      url: "images/乃木コレ9.jpg",
+      url: "/images/乃木コレ9.jpg",
       price: 200,
     };
     const item4: ItemType = {
       id: 0,
-      name: "コナン100巻",
+      name: "乃木コレ10",
       status: "hold",
-      url: "images/乃木コレ10.jpg",
+      url: "/images/乃木コレ10.jpg",
       price: 200,
     };
     const item5: ItemType = {
       id: 0,
-      name: "ポケモン3",
+      name: "乃木コレ11",
       status: "hold",
-      url: "images/ポケモン3.jpg",
+      url: "/images/乃木コレ11.jpg",
       price: 200,
     };
     const item6: ItemType = {
       id: 0,
-      name: "ポケモン4",
+      name: "乃木コレ12",
       status: "hold",
-      url: "images/ポケモン4.jpeg",
+      url: "/images/乃木コレ12.jpg",
       price: 200,
     };
     const item7: ItemType = {
       id: 0,
       name: "ポケモン5",
       status: "hold",
-      url: "images/ポケモン5.jpg",
+      url: "/images/ポケモン5.jpg",
       price: 200,
     };
     const item8: ItemType = {
       id: 0,
       name: "ポケモン6",
       status: "hold",
-      url: "images/ポケモン6.jpg",
+      url: "/images/ポケモン6.jpeg",
       price: 200,
     };
     const item9: ItemType = {
       id: 0,
       name: "ポケモン7",
       status: "hold",
-      url: "images/ポケモン7.jpeg",
+      url: "/images/ポケモン7.jpeg",
       price: 200,
     };
     const item10: ItemType = {
       id: 0,
       name: "ポケモン8",
       status: "hold",
-      url: "images/ポケモン8.webp",
+      url: "/images/ポケモン8.webp",
       price: 200,
     };
     const item11: ItemType = {
       id: 0,
       name: "ポケモン9",
       status: "hold",
-      url: "images/ポケモン9.jpeg",
+      url: "/images/ポケモン9.jpeg",
       price: 200,
     };
     const item12: ItemType = {
       id: 0,
       name: "ポケモン10",
       status: "hold",
-      url: "images/ポケモン10.jpg",
+      url: "/images/ポケモン10.jpg",
       price: 200,
     };
     return (
@@ -107,16 +107,16 @@ export default function Index() {
             </div>
         </div>
         <div className="grid grid-cols-3 gap-4 p-2">
-            <Item item={item11} showPrice={true} />
+            <Item item={item6} showPrice={true} />
             <Item item={item5} showPrice={true} />
-            <Item item={item12} showPrice={true} />
+            <Item item={item9} showPrice={true} />
+            <Item item={item10} showPrice={true} />
+            <Item item={item11} showPrice={true} />
             <Item item={item4} showPrice={true} />
             <Item item={item3} showPrice={true} />
-            <Item item={item10} showPrice={true} />
-            <Item item={item3} showPrice={true} />
-            <Item item={item9} showPrice={true} />
-            <Item item={item2} showPrice={true} />
             <Item item={item8} showPrice={true} />
+            <Item item={item2} showPrice={true} />
+            <Item item={item12} showPrice={true} />
             <Item item={item} showPrice={true} />
             <Item item={item7} showPrice={true} />
         </div>

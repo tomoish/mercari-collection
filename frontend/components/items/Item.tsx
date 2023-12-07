@@ -42,7 +42,7 @@ const Item = ({ item, showPrice }: { item: ItemType; showPrice: boolean }) => {
           <div></div>
         )}
 
-        <Link href={`${item.url}`} className="h-40 w-30">
+        <Link href={`${item.url}`} className="text-black mt-10 h-40 w-30">
           {item.name}
         </Link>
         {showPrice && <p className="mt-2 text-gray-600">¥ {item.price}</p>}

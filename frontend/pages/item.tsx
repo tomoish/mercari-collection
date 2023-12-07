@@ -27,39 +27,39 @@ export default function Index() {
     };
     return (
         <Layout title="home">
-        <div className="p-2">
-            <Item item={item} showPrice={false} />
-        </div>
-        {item.status === "sold" ? (
-        ) : item.status === "on sale" ? (
-            <p className="text-black" >出品中です</ p>
-        ) : item.status === "hold" ? (
-            <p className="text-black" >出品しますか？</ p>
-        ) : (
-            <div></div>
-        )}
-        <div>推移図</div>
-            {/*
-            <Image
-                src="/images/資産総額推移.png" // Replace with the actual image source
-                className="object-contain h-48 w-48 j"
-                width={100}
-                height={100}
-                alt="Picture of the author"
-            />
-            */}
-        <p className="text-black" >insight</ p>
-        <div className="grid grid-cols-3 gap-4 p-2">
-            <Item item={item} showPrice={true} />
-            <Item item={item2} showPrice={true} />
-            <Item item={item3} showPrice={true} />
-            <Item item={item} showPrice={true} />
-            <Item item={item2} showPrice={true} />
-            <Item item={item3} showPrice={true} />
-            <Item item={item} showPrice={true} />
-            <Item item={item2} showPrice={true} />
-            <Item item={item3} showPrice={true} />
-        </div>
+            <div className="p-2">
+                <Item item={item} showPrice={false} />
+            </div>
+            {item.status === "sold" ? (
+                <p className="text-black" >売れました</ p>
+            ) : item.status === "on sale" ? (
+                <p className="text-black" >出品中です</ p>
+            ) : item.status === "hold" ? (
+                <p className="text-black" >出品しますか？</ p>
+            ) : (
+                <div></div>
+            )}
+
+            <div className="text-black" >推移図</div>
+                <Image
+                    src="/images/資産総額推移.png" // Replace with the actual image source
+                    className="mt-6 rounded-lg shadow-xl"
+                    width={100}
+                    height={100}
+                    alt="Picture of the author"
+                />
+            <p className="text-black" >insight</ p>
+            <div className="grid grid-cols-3 gap-4 p-2">
+                <Item item={item} showPrice={true} />
+                <Item item={item2} showPrice={true} />
+                <Item item={item3} showPrice={true} />
+                <Item item={item} showPrice={true} />
+                <Item item={item2} showPrice={true} />
+                <Item item={item3} showPrice={true} />
+                <Item item={item} showPrice={true} />
+                <Item item={item2} showPrice={true} />
+                <Item item={item3} showPrice={true} />
+            </div>
         </Layout>
     );
 }

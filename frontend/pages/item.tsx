@@ -32,9 +32,9 @@ export default function Index() {
         </div>
         {item.status === "sold" ? (
         ) : item.status === "on sale" ? (
-            <p className="text-slate-100" >出品中です</ p>
+            <p className="text-black" >出品中です</ p>
         ) : item.status === "hold" ? (
-            <p className="text-slate-100" >出品しますか？</ p>
+            <p className="text-black" >出品しますか？</ p>
         ) : (
             <div></div>
         )}
@@ -48,7 +48,7 @@ export default function Index() {
                 alt="Picture of the author"
             />
             */}
-        <p className="text-slate-100" >insight</ p>
+        <p className="text-black" >insight</ p>
         <div className="grid grid-cols-3 gap-4 p-2">
             <Item item={item} showPrice={true} />
             <Item item={item2} showPrice={true} />

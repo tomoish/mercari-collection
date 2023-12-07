@@ -14,14 +14,17 @@ export default function Index() {
     return (
         <>
             <div>
+                {/* 総資産推移 */}
                 <Image
-                    src="/path/to/image.jpg" // Replace with the actual image source
-                    className="object-contain h-48 w-48"
+                    src="/images/資産総額推移.png" // Replace with the actual image source
+                    className="object-contain h-48 w-48 j"
                     width={100}
                     height={100}
                     alt="Picture of the author"
                 />
+                {/* 期間選択ボタン */}
             </div>
+            {/* レコメンドカード */}
             <div className="grid grid-cols-3 gap-4">
                 <Item item={item} showPrice={true} /> {/* Add the showPrice prop */}
                 <Item item={item} showPrice={true} /> {/* Add the showPrice prop */}
@@ -29,6 +32,7 @@ export default function Index() {
                 <Item item={item} showPrice={true} /> {/* Add the showPrice prop */}
                 <Item item={item} showPrice={true} /> {/* Add the showPrice prop */}
             </div>
+            {/* アイテム縦一覧 */}
         </>
     );
 }

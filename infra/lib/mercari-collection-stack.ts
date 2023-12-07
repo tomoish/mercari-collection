@@ -5,7 +5,7 @@ import {
   aws_dynamodb as dynamodb,
   aws_apigateway as gateway,
   aws_lambda as lambda,
-  aws_s3 as s3,
+  aws_s3 as s3
 } from "aws-cdk-lib";
 import { Construct } from 'constructs';
 import * as path from "path";
@@ -30,6 +30,11 @@ export class MercariCollectionStack extends cdk.Stack {
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
+    itemsTable.addGlobalSecondaryIndex({
+      indexName: "user_id",
+      partitionKey: { name: "user_id", type: dynamodb.AttributeType.NUMBER },
+    });
+
     const lambdaAsset = new assets.Asset(this, "LambdaAsset", {
       path: path.join(__dirname, "../../backend/bin"),
     });
@@ -50,6 +55,7 @@ export class MercariCollectionStack extends cdk.Stack {
 
     usersTable.grantFullAccess(ginLambdaFunction);
     itemsTable.grantFullAccess(ginLambdaFunction);
+    itemsTable.grantReadData(ginLambdaFunction);
 
     new gateway.LambdaRestApi(this, "GinServerLambdaEndpoint", {
       handler: ginLambdaFunction,

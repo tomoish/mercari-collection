@@ -38,6 +38,11 @@ type UpdateRequest struct {
 	Status string `json:"status"`
 }
 
+type UpdateHolder struct {
+	UID 		string 	`json:"uid"`
+	UserName	string 	`json:"user_name"`
+}
+
 var ginLambda *ginadapter.GinLambda
 
 func init() {
@@ -48,7 +53,7 @@ func init() {
 	router.GET("/items/:iid", getItem)
 	router.PUT("/items/change/price/:iid", changeItemPrice)
 	router.PUT("/items/change/status/:iid", changeItemStatus)
-	// router.PUT("/items/change/user/:iid", changeItemUser)
+	router.PUT("/items/change/user/:iid", changeItemHolder)
 
     // router.Run()
 
@@ -173,7 +178,6 @@ func changeItemPrice(c *gin.Context) {
 
 func changeItemStatus(c *gin.Context) {
 	item_id := c.Param("iid")
-	// status := c.Query("status")
 	var updateRequest UpdateRequest
 	if err := c.ShouldBindJSON(&updateRequest); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
@@ -200,6 +204,56 @@ func changeItemStatus(c *gin.Context) {
             },
         },
 		UpdateExpression: aws.String("SET #Status = :status"),
+		ReturnValues: aws.String("ALL_NEW"),
+	}
+
+	res, err := db.UpdateItem(input)
+	if err != nil {
+		fmt.Println("Cannot get value from DynamoDB", err)
+	}
+
+	item := &ItemResponse{}
+    if err := dynamodbattribute.UnmarshalMap(res.Attributes, item); err != nil {
+        fmt.Println("[Unmarshal Error]", err)
+        return
+    }
+
+	c.IndentedJSON(http.StatusOK, item)
+
+}
+
+func changeItemHolder(c *gin.Context) {
+	item_id := c.Param("iid")
+	var updateRequest UpdateHolder
+	if err := c.ShouldBindJSON(&updateRequest); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	sess, _ := session.NewSession()
+	db := dynamodb.New(sess)
+
+	tableName := "ItemsData"
+
+	input := &dynamodb.UpdateItemInput{
+		TableName: aws.String(tableName),
+		Key: map[string]*dynamodb.AttributeValue{
+			"id": {
+				N: aws.String(item_id),
+			},
+		},
+		ExpressionAttributeNames: map[string]*string{
+            "#UID":   aws.String("user_id"),
+			"#UserName":   aws.String("user_name"),
+        },
+		ExpressionAttributeValues: map[string]*dynamodb.AttributeValue{
+            ":uid": {
+                N: aws.String(updateRequest.UID),
+            },
+			":uname": {
+                S: aws.String(updateRequest.UserName),
+            },
+        },
+		UpdateExpression: aws.String("SET #UID = :uid, #UserName = :uname"),
 		ReturnValues: aws.String("ALL_NEW"),
 	}
 

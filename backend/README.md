@@ -1,4 +1,4 @@
-## Get started
+## Getting started
 
 1. Create a Virtual Environment:
 ```

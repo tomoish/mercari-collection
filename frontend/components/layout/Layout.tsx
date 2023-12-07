@@ -15,7 +15,7 @@ const Layout = ({
       <Head>
         <title>{title}</title>
       </Head>
-      <div className=" bg-fixed bg-white h-screen">
+      <div className=" bg-fixed bg-white max-h-full">
         <Header />
         {children}
       </div>

@@ -3,4 +3,5 @@ export type ItemType = {
   name: string;
   status: string;
   url: string;
+  price: number;
 };

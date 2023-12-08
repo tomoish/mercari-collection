@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
@@ -7,10 +6,10 @@ const Header = () => {
       <div className="flex flex-wrap items-center justify-between gap-5 relative">
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
             <li>
-                <a href="/user" className="hover:underline me-4 md:me-6">マイコレクション</a>
+                <Link href="/user" className="hover:underline me-4 md:me-6">マイコレクション</Link>
             </li>
             <li>
-                <a href="/search" className="hover:underline">買う</a>
+                <Link href="/search" className="hover:underline">買う</Link>
             </li>
         </ul>
       </div>

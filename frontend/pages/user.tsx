@@ -127,14 +127,45 @@ export default function Index() {
   };
   return (
     <Layout title="home">
-      <div className="h-20 flex items-center justify-center">
-        <div className="mr-4">
+        <div className="pt-10 flex items-center justify-center">
           <img
             src={`${user_data.icon}`}
             alt="ユーザーアイコン"
-            className="w-12 h-12 rounded-full"
+            className="m w-20 h-20 rounded-full"
           />
+          <div className="pl-2 py-2 items-center justify-center">
+            <h3 className="text-left font-type1 font-semibold text-black text-2xl semi-normal text-opacity-80 pt-2 px-3"> 
+            {user_data.name}
+            </h3>
+            <h3 className="text-left font-type1 font-light text-black text-sm text-opacity-80 px-3"> 
+            @23134512
+            </h3>
+          </div>
         </div>
+
+        <div className="flex mx-6 border-b-4  border-mercari-gray my-4 pb-1">
+          <div className="mx-auto font-type1  text-black text-center">
+          <h2 className="text-center font-type font-semibold text-black text-sm semi-normal text-opacity-80 pt-1 px-3">12</h2>
+          <h2 className="text-center font-type font-base text-black text-sm normal-bold text-opacity-80 px-3">所持品</h2>
+          </div>
+          <div className="mx-auto font-type1 text-black text-center">
+          <h2 className="text-center font-type font-semibold text-black text-sm semi-normal text-opacity-80 pt-1 px-3">3</h2>
+          <h2 className="text-center font-type font-base text-black text-sm normal-bold text-opacity-80 px-3">出品</h2>
+          </div>
+          <div className="mx-auto font-type1 text-black text-center">
+          <h2 className="text-center font-type font-semibold text-black text-sm semi-normal text-opacity-80 pt-1 px-3">6</h2>
+          <h2 className="text-center font-type font-base text-black text-sm normal-bold text-opacity-80 px-3">フォロワー</h2>
+          </div>
+          <div className="mx-auto font-type1 text-black text-center">
+          <h2 className="text-center font-type font-semibold text-black text-sm semi-normal text-opacity-80 pt-1 px-3">16</h2>
+          <h2 className="text-center font-type font-base text-black text-sm normal-bold text-opacity-80 px-3">取引</h2>
+          </div>
+          <div className="mx-auto font-type1 text-black text-center">
+          <h2 className="text-center font-type font-semibold text-black text-sm semi-normal text-opacity-80 pt-1 px-3">7</h2>
+          <h2 className="text-center font-type font-base text-black text-sm normal-bold text-opacity-80 px-3">いいね</h2>
+          </div>
+        </div>
+        
         <Link href="/user-assets" className="flex items-center">
           <p className="text-4xl font-semibold">{`${user_data.name}`}</p>
           <svg
@@ -152,7 +183,6 @@ export default function Index() {
             </g>
           </svg>
         </Link>
-      </div>
       {/* <p>User ID: {uid}</p> */}
       {items !== undefined ? (
         <div className="grid grid-cols-3 gap-4 p-2">
@@ -165,7 +195,6 @@ export default function Index() {
       ) : (
         <p>Loading...</p>
       )}
-
       {/* <div className="grid grid-cols-3 gap-4 p-2">
         <Item item={item} showPrice={false} />
         <Item item={item2} showPrice={false} />

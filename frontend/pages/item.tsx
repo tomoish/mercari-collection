@@ -7,25 +7,25 @@ import Image from 'next/image';
 export default function Index() {
     const item0 = useSelector((state: any) => state.item.value);
     const item: ItemType = {
-        id: 0,
-        name: "乃木コレ1",
-        status: "sold",
-        url: "/images/乃木コレ3.jpg",
-        price: 700,
+      id: 0,
+      name: "乃木コレ 賀喜遥香SSR",
+      status: "hold",
+      url: "/images/乃木コレ1.jpg",
+      price: 14000,
     };
     const item2: ItemType = {
-        id: 0,
-        name: "乃木コレ2",
-        status: "hold",
-        url: "/images/乃木コレ4.jpg",
-        price: 700,
+      id: 0,
+      name: "乃木コレ 齋藤飛鳥SR",
+      status: "hold",
+      url: "/images/乃木コレ2.jpg",
+      price: 7900,
     };
     const item3: ItemType = {
-        id: 0,
-        name: "乃木コレ3",
-        status: "hold",
-        url: "/images/乃木コレ5.jpg",
-        price: 700,
+      id: 0,
+      name: "乃木コレ 中村麗乃",
+      status: "hold",
+      url: "/images/乃木コレ3.jpg",
+      price: 300,
     };
     return (
         <Layout title="home">

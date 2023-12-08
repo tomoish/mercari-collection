@@ -32,7 +32,7 @@ const UserLink = ({ userId, children } : {userId: any, children: any}) => {
   };
 
   return (
-    <button onClick={handleClick} className="h-40 w-30 border-4">
+    <button onClick={handleClick} >
       {children}
     </button>
   );

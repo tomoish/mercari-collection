@@ -12,6 +12,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 	ginadapter "github.com/awslabs/aws-lambda-go-api-proxy/gin"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -47,9 +48,17 @@ var ginLambda *ginadapter.GinLambda
 
 func init() {
     router := gin.Default()
+
+	//CORS回避
+	config := cors.DefaultConfig()
+
+    config.AllowOrigins = []string{"http://localhost:3000"}
+    router.Use(cors.New(config))
+
     router.GET("/ping", getPong)
 	router.GET("/user/:uid", getUser)
 	router.GET("/items/user/:uid", getUserItems)
+	router.GET("/items/all", getAllItems)
 	router.GET("/items/:iid", getItem)
 	router.PUT("/items/change/price/:iid", changeItemPrice)
 	router.PUT("/items/change/status/:iid", changeItemStatus)
@@ -170,6 +179,30 @@ func getUserItems(c *gin.Context) {
 
 	c.IndentedJSON(http.StatusOK, items)
 
+}
+
+func getAllItems(c *gin.Context) {
+	sess, _ := session.NewSession()
+	db := dynamodb.New(sess)
+
+	tableName := "ItemsData"
+
+	params := &dynamodb.ScanInput{
+		TableName: aws.String(tableName),
+	}
+
+	res, err := db.Scan(params)
+	if err != nil {
+		fmt.Println("Cannot get value from DynamoDB", err)
+	}
+
+	items := make([]*ItemResponse, 0)
+	if err := dynamodbattribute.UnmarshalListOfMaps(res.Items, &items); err != nil {
+        fmt.Println("[Unmarshal Error]", err)
+        return
+    }
+
+	c.IndentedJSON(http.StatusOK, items)
 }
 
 func changeItemPrice(c *gin.Context) {

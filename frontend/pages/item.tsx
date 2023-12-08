@@ -30,7 +30,7 @@ export default function Index() {
     return (
         <Layout title="home">
             <div className="p-2">
-                <Item item={item} showPrice={false} />
+                <Item item={item0} showPrice={false} />
                 <h2 className="text-left font-type font-bold text-black text-2xl semi-bold text-opacity-80 pt-3 px-3" >{item.name}</h2>
                 <h2 className="text-left font-type font- text-black text-3xl semi-normal text-opacity-80 pt-1 px-3"> 
                 <span className="text-base font-light px-1">¥</span>{item.price}<span className="text-base font-light mx-1">(税込)</span>

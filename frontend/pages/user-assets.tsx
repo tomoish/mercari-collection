@@ -1,41 +1,86 @@
 import Item from "@/components/items/Item";
+import Layout from "@/components/layout/Layout";
 import { ItemType } from "@/types/ItemType";
 import Image from 'next/image';
+import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
 
 export default function Index() {
     const item: ItemType = {
-        id: 0,
-        name: "sample",
-        status: "sold",
-        url: "",
-        price: 200,
+      id: 0,
+      name: "乃木コレ7",
+      status: "sold",
+      url: "/images/乃木コレ7.jpg",
+      price: 200,
+    };
+    const item2: ItemType = {
+      id: 0,
+      name: "乃木コレ8",
+      status: "hold",
+      url: "/images/乃木コレ8.jpg",
+      price: 200,
+    };
+    const item3: ItemType = {
+      id: 0,
+      name: "乃木コレ9",
+      status: "hold",
+      url: "/images/乃木コレ9.jpg",
+      price: 200,
     };
 
     return (
-        <>
-            <div>
-                {/* 総資産推移 */}
-                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
-                    <path d="M18.79 17.3L14.85 13.36C16.1462 11.8064 16.7934 9.81273 16.6568 7.79402C16.5202 5.77531 15.6104 3.88703 14.1167 2.52219C12.623 1.15735 10.6605 0.421092 8.63771 0.466656C6.6149 0.51222 4.68756 1.33609 3.25685 2.7668C1.82614 4.19751 1.00227 6.12485 0.956707 8.14766C0.911143 10.1705 1.6474 12.133 3.01224 13.6266C4.37708 15.1203 6.26536 16.0301 8.28407 16.1667C10.3028 16.3033 12.2964 15.6562 13.85 14.36L17.79 18.3C17.8552 18.3665 17.933 18.4193 18.0189 18.4554C18.1047 18.4914 18.1969 18.51 18.29 18.51C18.3817 18.5104 18.4725 18.4919 18.5568 18.4558C18.6411 18.4197 18.7171 18.3667 18.78 18.3C18.8485 18.2362 18.9032 18.1592 18.9409 18.0736C18.9787 17.988 18.9986 17.8957 18.9996 17.8021C19.0005 17.7086 18.9824 17.6159 18.9464 17.5295C18.9104 17.4432 18.8572 17.3651 18.79 17.3ZM4.28004 12.89C3.37974 11.9892 2.76673 10.8417 2.51852 9.59255C2.27032 8.34341 2.39806 7.04872 2.88559 5.87216C3.37312 4.69561 4.19855 3.69003 5.25753 2.98254C6.3165 2.27506 7.56147 1.89745 8.83504 1.89745C10.1086 1.89745 11.3536 2.27506 12.4125 2.98254C13.4715 3.69003 14.297 4.69561 14.7845 5.87216C15.272 7.04872 15.3998 8.34341 15.1515 9.59255C14.9033 10.8417 14.2903 11.9892 13.39 12.89C12.7927 13.4896 12.0828 13.9653 11.3011 14.2899C10.5195 14.6145 9.68141 14.7816 8.83504 14.7816C7.98866 14.7816 7.15061 14.6145 6.36895 14.2899C5.5873 13.9653 4.87742 13.4896 4.28004 12.89Z" fill="#333333"/>
-                </svg>
-                <Image
-                    src="/images/資産総額推移.png" // Replace with the actual image source
-                    className="object-contain h-48 w-48 j"
-                    width={100}
-                    height={100}
-                    alt="Picture of the author"
-                />
-                {/* 期間選択ボタン */}
-            </div>
-            {/* レコメンドカード */}
-            <div className="grid grid-cols-3 gap-4">
-                <Item item={item} showPrice={true} /> {/* Add the showPrice prop */}
-                <Item item={item} showPrice={true} /> {/* Add the showPrice prop */}
-                <Item item={item} showPrice={true} /> {/* Add the showPrice prop */}
-                <Item item={item} showPrice={true} /> {/* Add the showPrice prop */}
-                <Item item={item} showPrice={true} /> {/* Add the showPrice prop */}
-            </div>
-            {/* アイテム縦一覧 */}
-        </>
+      <Layout title="home">
+        <div>
+          {/* 総資産推移 */}
+          <div> 推定総資産</div>
+          <Image
+            src="/images/資産総額推移.png" // Replace with the actual image source
+            className="object-contain h-48 w-48 j"
+            width={100}
+            height={100}
+            alt="Picture of the author"
+          />
+          {/* 期間選択ボタン */}
+          <div>月間</div>
+          <div>年間</div>
+          <div>全期間</div>
+        </div>
+        {/* 人気カテゴリー */}
+        <div>1位 乃木坂</div>
+        <div>+ 300 %</div>
+        <div>2位 ポケカ</div>
+        <div>+ 120 %</div>
+        {/* アイテム縦一覧 */}
+        <div> 人気コレクション</div>
+        <Swiper
+          loop={true}
+          slidesPerView={3}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+        >
+          <SwiperSlide>
+            <Item item={item2} showPrice={true} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Item item={item} showPrice={true} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Item item={item3} showPrice={true} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Item item={item2} showPrice={true} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Item item={item2} showPrice={true} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Item item={item2} showPrice={true} />
+          </SwiperSlide>
+        </Swiper>
+      </Layout
     );
 }

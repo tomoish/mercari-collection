@@ -12,16 +12,18 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        
       },
-      // 欧文（暫定）：FF Mark (FontFont)
-      //和文：たづがね®角ゴシック (Monotype)
       fontFamily: {
         type1: ['Maven Pro'],
-        type2: ['Zen Kaku Gothic New']
+        type2: ['Zen Kaku Gothic New'],
+      },
+      colors: {
+        'mercari-red': '#FF0211',
+        'mercari-blue': '#4DC9FF',
+        'mercari-gray': '#E5E5E5',
       },
     },
   },
   plugins: [],
-}
+};
 export default config

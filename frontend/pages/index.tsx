@@ -72,7 +72,7 @@ export default function Home() {
       {items !== undefined ? (
         <div className="grid grid-cols-3 gap-4 p-2">
           {items.map((item) => (
-            <Item item={item} showPrice={false} />
+            <Item key={item.id} item={item} showPrice={false} />
           ))}
         </div>
       ) : (

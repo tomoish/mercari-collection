@@ -160,7 +160,7 @@ export default function Index() {
       {items !== undefined ? (
         <div className="grid grid-cols-3 gap-4 p-2">
           {items.map((item) => (
-            <button onClick={() => handleClick(item)}>
+            <button key={item.id} onClick={() => handleClick(item)}>
               <Item item={item} showPrice={false} />
             </button>
           ))}

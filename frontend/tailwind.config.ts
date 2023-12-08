@@ -13,8 +13,17 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        type1: ['Maven Pro'],
+        type2: ['Zen Kaku Gothic New'],
+      },
+      colors: {
+        'mercari-red': '#FF0211',
+        'mercari-blue': '#4DC9FF',
+        'mercari-gray': '#E5E5E5',
+      },
     },
   },
   plugins: [],
-}
+};
 export default config

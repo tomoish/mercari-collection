@@ -5,9 +5,10 @@ import Link from "next/link";
 const Item = ({ item, showPrice }: { item: ItemType; showPrice: boolean }) => {
   console.log(item)
   return (
-    <div className="h-70 w-30 border-4">
+    //アイテムを正方形にする
+    <div className="h-50 w-50 border-4">
       <div className="text-center py-5 relative">
-        <div className="flex justify-center items-center ">
+        <div className="flex justify-center items-center">
           <Image
             src={`${item.url}`}
             className="object-contain h-48 w-48"
@@ -17,6 +18,7 @@ const Item = ({ item, showPrice }: { item: ItemType; showPrice: boolean }) => {
           />
         </div>
         {item.status === "sold" ? (
+          //soldタグをレスポンシブにする
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="122"
@@ -42,11 +44,18 @@ const Item = ({ item, showPrice }: { item: ItemType; showPrice: boolean }) => {
         ) : (
           <div></div>
         )}
-
-        <Link href={`${item.url}`} className="h-40 w-30">
+        
+        {/* 名前は表示なし
+        <Link href={`${item.url}`} className="text-black h-40 w-30">
           {item.name}
-        </Link>
-        {showPrice && <p className="mt-2 text-gray-600">¥ {item.price}</p>}
+        </Link> 
+        */}
+        {/* 料金表示 */}
+        {showPrice && (
+        <div className="absolute left-0 text-left text-white font-bold bg-black bg-opacity-40 mb-2 px-5 rounded-r-2xl">
+          <span className="font-semibold" >¥</span> {item.price}
+        </div>
+      )}
       </div>
     </div>
   );

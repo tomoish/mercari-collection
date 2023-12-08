@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Item = ({ item, showPrice }: { item: ItemType; showPrice: boolean }) => {
+  console.log(item)
   return (
     //アイテムを正方形にする
     <div className="h-50 w-50 border-4">

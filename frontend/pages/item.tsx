@@ -1,9 +1,11 @@
 import Item from "@/components/items/Item";
 import Layout from "@/components/layout/Layout";
 import { ItemType } from "@/types/ItemType";
+import { useSelector } from "react-redux";
 import Image from 'next/image';
 
 export default function Index() {
+    const item0 = useSelector((state: any) => state.item.value);
     const item: ItemType = {
         id: 0,
         name: "乃木コレ1",

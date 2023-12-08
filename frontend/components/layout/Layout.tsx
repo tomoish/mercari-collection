@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 
 const Layout = ({
@@ -18,6 +19,7 @@ const Layout = ({
       <div className=" bg-fixed bg-white max-h-full">
         <Header />
         {children}
+        <Footer />
       </div>
     </>
   );

@@ -16,6 +16,8 @@ export class MercariCollectionStack extends cdk.Stack {
 
     new s3.Bucket(this, "ArtsBucket", {
       versioned: true,
+      publicReadAccess: true,
+      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ACLS,
     });
 
     const usersTable = new dynamodb.Table(this, "UsersTable", {

@@ -81,6 +81,6 @@ export default function Index() {
             <Item item={item2} showPrice={true} />
           </SwiperSlide>
         </Swiper>
-      </Layout
+      </Layout>
     );
 }

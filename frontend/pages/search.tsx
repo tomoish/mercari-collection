@@ -7,7 +7,7 @@ export default function Index() {
       id: 0,
       name: "乃木コレ 賀喜遥香SSR",
       status: "",
-      url: "/images/乃木コレ7_賀喜SSR.jpg",
+      url: "/images/乃木コレ3_賀喜遥香SSR.jpg",
       price: 14000,
     };
     const item2: ItemType = {
@@ -49,7 +49,7 @@ export default function Index() {
       id: 0,
       name: "ポケモン ピカチュウ",
       status: "hold",
-      url: "/images/ポケモン5_ピカチュウ昼寝",
+      url: "/images/ポケモン5_ピカチュウ昼寝.jpg",
       price: 33000,
     };
     const item8: ItemType = {

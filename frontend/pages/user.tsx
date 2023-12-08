@@ -9,14 +9,14 @@ export default function Index() {
     id: 0,
     name: "乃木コレ 賀喜遥香SSR",
     status: "",
-    url: "/images/乃木コレ3_賀喜遥香SSR.jpg",
+    url: "/images/乃木コレ3_賀喜遥香SSR.jpg.jpg",
     price: 14000,
   };
   const item3: ItemType = {
     id: 0,
-    name: "乃木コレ 齋藤飛鳥SSR",
+    name: "乃木コレ 齋藤飛鳥SR",
     status: "",
-    url: "/images/乃木コレ2.jpg",
+    url: "/images/乃木コレ2_齋藤SR2.jpg",
     price: 7900,
   };
   const item4: ItemType = {
@@ -44,7 +44,7 @@ export default function Index() {
     id: 0,
     name: "乃木コレ 賀喜遥香SSR",
     status: "",
-    url: "/images/乃木コレ7_賀喜SSR.jpg",
+    url: "/images/乃木コレ3_賀喜遥香SSR.jpg",
     price: 14000,
   };
   const item8: ItemType = {

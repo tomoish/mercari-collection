@@ -52,7 +52,7 @@ export default function Index() {
   const item2: ItemType = {
     id: 0,
     name: "乃木コレ 五百城茉央SR",
-    status: "sold",
+    status: "",
     url: "/images/乃木コレ8_五百城SR.jpg",
     price: 2200,
   };
@@ -66,21 +66,21 @@ export default function Index() {
   const item4: ItemType = {
     id: 0,
     name: "乃木コレ 池田瑛紗",
-    status: "sold",
+    status: "hold",
     url: "/images/乃木コレ10_池田2.jpg",
     price: 580,
   };
   const item5: ItemType = {
     id: 0,
     name: "乃木コレ 五百城茉央",
-    status: "sold",
+    status: "hold",
     url: "/images/乃木コレ5_五百城.jpg",
     price: 600,
   };
   const item6: ItemType = {
     id: 0,
     name: "乃木コレ 伊藤理々杏SSR",
-    status: "sold",
+    status: "hold",
     url: "/images/乃木コレ6_伊藤SSR.jpg",
     price: 3900,
   };

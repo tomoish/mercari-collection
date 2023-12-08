@@ -1,7 +1,6 @@
 import Item from "@/components/items/Item";
 import Layout from "@/components/layout/Layout";
 import { ItemType } from "@/types/ItemType";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -134,10 +133,10 @@ export default function Index() {
             className="m w-20 h-20 rounded-full"
           />
           <div className="pl-2 py-2 items-center justify-center">
-            <h3 className="text-left font-type1 font-semibold text-black text-2xl semi-normal text-opacity-80 pt-2 px-3"> 
+            <h3 className="text-left font-type1 font-semibold text-black text-2xl semi-normal text-opacity-80 pt-2 px-3">
             {user_data.name}
             </h3>
-            <h3 className="text-left font-type1 font-light text-black text-sm text-opacity-80 px-3"> 
+            <h3 className="text-left font-type1 font-light text-black text-sm text-opacity-80 px-3">
             @23134512
             </h3>
           </div>
@@ -165,8 +164,8 @@ export default function Index() {
           <h2 className="text-center font-type font-base text-black text-sm normal-bold text-opacity-80 px-3">いいね</h2>
           </div>
         </div>
-        
-        <Link href="/user-assets" className="flex items-center">
+
+        {/* <Link href="/user-assets" className="flex items-center">
           <p className="text-4xl font-semibold">{`${user_data.name}`}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +181,7 @@ export default function Index() {
               />
             </g>
           </svg>
-        </Link>
+        </Link> */}
       {/* <p>User ID: {uid}</p> */}
       {items !== undefined ? (
         <div className="grid grid-cols-3 gap-4 p-2">

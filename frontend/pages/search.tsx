@@ -156,7 +156,7 @@ export default function Index() {
       ) : (
         <p>Loading...</p>
       )}
-      <div className="grid grid-cols-3 gap-4 p-2">
+      {/* <div className="grid grid-cols-3 gap-4 p-2">
         <Item item={item6} showPrice={true} />
         <Item item={item5} showPrice={true} />
         <Item item={item9} showPrice={true} />
@@ -169,7 +169,7 @@ export default function Index() {
         <Item item={item12} showPrice={true} />
         <Item item={item1} showPrice={true} />
         <Item item={item7} showPrice={true} />
-      </div>
+      </div> */}
     </Layout>
   );
 }

@@ -3,89 +3,89 @@ import Layout from "@/components/layout/Layout";
 import { ItemType } from "@/types/ItemType";
 
 export default function Index() {
-    const item: ItemType = {
-        id: 0,
-        name: "乃木コレ7",
-        status: "sold",
-        url: "/images/乃木コレ7.jpg",
-        price: 200,
+    const item1: ItemType = {
+      id: 0,
+      name: "乃木コレ 賀喜遥香SSR",
+      status: "",
+      url: "/images/乃木コレ7_賀喜SSR.jpg",
+      price: 14000,
     };
     const item2: ItemType = {
       id: 0,
-      name: "乃木コレ8",
-      status: "hold",
-      url: "/images/乃木コレ8.jpg",
-      price: 200,
+      name: "乃木コレ 五百城茉央SR",
+      status: "sold",
+      url: "/images/乃木コレ8_五百城SR.jpg",
+      price: 2200,
     };
     const item3: ItemType = {
       id: 0,
-      name: "乃木コレ9",
-      status: "hold",
-      url: "/images/乃木コレ9.jpg",
-      price: 200,
+      name: "乃木コレ 池田瑛紗",
+      status: "",
+      url: "/images/乃木コレ9_池田1.jpg",
+      price: 580,
     };
     const item4: ItemType = {
       id: 0,
-      name: "乃木コレ10",
-      status: "hold",
-      url: "/images/乃木コレ10.jpg",
-      price: 200,
+      name: "乃木コレ 池田瑛紗",
+      status: "sold",
+      url: "/images/乃木コレ10_池田2.jpg",
+      price: 580,
     };
     const item5: ItemType = {
       id: 0,
-      name: "乃木コレ11",
-      status: "hold",
-      url: "/images/乃木コレ11.jpg",
-      price: 200,
+      name: "乃木コレ 五百城茉央",
+      status: "sold",
+      url: "/images/乃木コレ5_五百城.jpg",
+      price: 600,
     };
     const item6: ItemType = {
       id: 0,
-      name: "乃木コレ12",
-      status: "hold",
-      url: "/images/乃木コレ12.jpg",
-      price: 200,
+      name: "乃木コレ 伊藤理々杏SSR",
+      status: "sold",
+      url: "/images/乃木コレ6_伊藤SSR.jpg",
+      price: 3900,
     };
     const item7: ItemType = {
       id: 0,
-      name: "ポケモン5",
+      name: "ポケモン ピカチュウ",
       status: "hold",
-      url: "/images/ポケモン5.jpg",
-      price: 200,
+      url: "/images/ポケモン5_ピカチュウ昼寝",
+      price: 33000,
     };
     const item8: ItemType = {
       id: 0,
-      name: "ポケモン6",
+      name: "ポケモン ナンジャモ",
       status: "hold",
-      url: "/images/ポケモン6.jpeg",
-      price: 200,
+      url: "/images/ポケモン8_ナンジャモR.jpg",
+      price: 89000,
     };
     const item9: ItemType = {
       id: 0,
-      name: "ポケモン7",
+      name: "ポケモン ナンジャモ",
       status: "hold",
-      url: "/images/ポケモン7.jpeg",
-      price: 200,
+      url: "/images/ポケモン7_ナンジャモ.jpg",
+      price: 67000,
     };
     const item10: ItemType = {
       id: 0,
-      name: "ポケモン8",
+      name: "ポケモン ナンジャモ",
       status: "hold",
-      url: "/images/ポケモン8.webp",
-      price: 200,
+      url: "/images/ポケモン8_ナンジャモR.jpg",
+      price: 89000,
     };
     const item11: ItemType = {
       id: 0,
-      name: "ポケモン9",
+      name: "ポケモン ミライドンex",
       status: "hold",
-      url: "/images/ポケモン9.jpeg",
-      price: 200,
+      url: "/images/ポケモン9_ミライドンex.jpg",
+      price: 3900,
     };
     const item12: ItemType = {
       id: 0,
-      name: "ポケモン10",
+      name: "ポケモン リザードンex2",
       status: "hold",
-      url: "/images/ポケモン10.jpg",
-      price: 200,
+      url: "/images/ポケモン10_リザードンex2.jpg",
+      price: 2900,
     };
     return (
     <Layout title="home">
@@ -117,7 +117,7 @@ export default function Index() {
             <Item item={item8} showPrice={true} />
             <Item item={item2} showPrice={true} />
             <Item item={item12} showPrice={true} />
-            <Item item={item} showPrice={true} />
+            <Item item={item1} showPrice={true} />
             <Item item={item7} showPrice={true} />
         </div>
         </Layout>

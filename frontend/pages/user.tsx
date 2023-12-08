@@ -2,25 +2,19 @@ import Item from "@/components/items/Item";
 import Layout from "@/components/layout/Layout";
 import { ItemType } from "@/types/ItemType";
 import Link from "next/link";
+// import { ItemNC1 } from "@/components/items/ItemProducts";
 
 export default function Index() {
-  const item: ItemType = {
-    id: 0,
-    name: "乃木コレ 齋藤飛鳥SSR",
-    status: "",
-    url: "/images/乃木コレ_齋藤飛鳥SSR.jpg",
-    price: 21000,
-  };
   const item2: ItemType = {
     id: 0,
     name: "乃木コレ 賀喜遥香SSR",
     status: "",
-    url: "/images/乃木コレ1.jpg",
+    url: "/images/乃木コレ3_賀喜遥香SSR.jpg",
     price: 14000,
   };
   const item3: ItemType = {
     id: 0,
-    name: "乃木コレ 齋藤飛鳥SR",
+    name: "乃木コレ 齋藤飛鳥SSR",
     status: "",
     url: "/images/乃木コレ2.jpg",
     price: 7900,
@@ -29,63 +23,63 @@ export default function Index() {
     id: 0,
     name: "乃木コレ 中村麗乃",
     status: "",
-    url: "/images/乃木コレ3.jpg",
+    url: "/images/乃木コレ4_中村.jpg",
     price: 300,
   };
   const item5: ItemType = {
     id: 0,
     name: "乃木コレ 五百城茉央",
     status: "sold",
-    url: "/images/乃木コレ4.jpeg",
+    url: "/images/乃木コレ5_五百城.jpg",
     price: 600,
   };
   const item6: ItemType = {
     id: 0,
     name: "乃木コレ 伊藤理々杏SSR",
     status: "sold",
-    url: "/images/乃木コレ5.jpg",
+    url: "/images/乃木コレ6_伊藤SSR.jpg",
     price: 3900,
   };
   const item7: ItemType = {
     id: 0,
     name: "乃木コレ 賀喜遥香SSR",
     status: "",
-    url: "/images/乃木コレ11.jpg",
+    url: "/images/乃木コレ7_賀喜SSR.jpg",
     price: 14000,
   };
   const item8: ItemType = {
     id: 0,
     name: "乃木コレ 五百城茉央SR",
     status: "sold",
-    url: "/images/乃木コレ7.jpg",
+    url: "/images/乃木コレ8_五百城SR.jpg",
     price: 2200,
   };
   const item9: ItemType = {
     id: 0,
     name: "乃木コレ 池田瑛紗",
     status: "",
-    url: "/images/乃木コレ8.jpg",
+    url: "/images/乃木コレ9_池田1.jpg",
     price: 580,
   };
   const item10: ItemType = {
     id: 0,
     name: "乃木コレ 池田瑛紗",
     status: "sold",
-    url: "/images/乃木コレ9.jpg",
+    url: "/images/乃木コレ10_池田2.jpg",
     price: 580,
   };
   const item11: ItemType = {
     id: 0,
     name: "乃木コレ 池田瑛紗",
     status: "",
-    url: "/images/乃木コレ10.jpg",
+    url: "/images/乃木コレ11_池田3.jpg",
     price: 580,
   };
   const item12: ItemType = {
     id: 0,
     name: "乃木コレ 山下美月SSR",
     status: "",
-    url: "/images/乃木コレ12.jpg",
+    url: "/images/乃木コレ12_山下SSR.jpg",
     price: 16000,
   };
   return (
@@ -117,7 +111,6 @@ export default function Index() {
         </Link>
       </div>
       <div className="grid grid-cols-3 gap-4 p-2">
-        <Item item={item} showPrice={false} />
         <Item item={item2} showPrice={false} />
         <Item item={item3} showPrice={false} />
         <Item item={item4} showPrice={false} />

@@ -1,8 +1,12 @@
 import Item from "@/components/items/Item";
 import Layout from "@/components/layout/Layout";
 import { ItemType } from "@/types/ItemType";
+import { useSelector } from "react-redux";
 
 export default function Index() {
+  const item0 = useSelector((state: any) => state.item.value);
+
+
   const item: ItemType = {
     id: 0,
     name: "コナン100巻",
@@ -20,7 +24,7 @@ export default function Index() {
   return (
     <Layout title="home">
       <div className="p-2">
-        <Item item={item} showPrice={false} />
+        <Item item={item0} showPrice={false} />
       </div>
       {item.status === "sold" ? (
         <div>Item is sold</div>

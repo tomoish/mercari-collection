@@ -62,22 +62,22 @@ export default function Index() {
           }}
           modules={[Pagination]}
         >
-          <SwiperSlide>
+          <SwiperSlide key="1">
             <Item item={item2} showPrice={true} />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide key="1">
             <Item item={item} showPrice={true} />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide key="1">
             <Item item={item3} showPrice={true} />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide key="1">
             <Item item={item2} showPrice={true} />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide key="1">
             <Item item={item2} showPrice={true} />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide key="1">
             <Item item={item2} showPrice={true} />
           </SwiperSlide>
         </Swiper>

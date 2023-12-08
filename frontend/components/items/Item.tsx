@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Item = ({ item, showPrice }: { item: ItemType; showPrice: boolean }) => {
+  console.log(item)
   return (
     <div className="h-70 w-30 border-4">
       <div className="text-center py-5 relative">

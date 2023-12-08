@@ -11,7 +11,15 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.worldvectorlogo.com",
       },
+      {
+        protocol: "https",
+        hostname:
+          "mercaricollectionstack-artsbucket40edaf30-nyyhhk7dh2l5.s3.ap-northeast-1.amazonaws.com",
+      },
     ],
+  },
+  env: {
+    API_URL: process.env.API_URL,
   },
 };
 

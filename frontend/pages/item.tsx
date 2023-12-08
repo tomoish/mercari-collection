@@ -60,7 +60,7 @@ export default function Index() {
                     <path d="M16 18.5667C17.0309 18.5667 17.8666 17.7309 17.8666 16.7C17.8666 15.6691 17.0309 14.8333 16 14.8333C14.969 14.8333 14.1333 15.6691 14.1333 16.7C14.1333 17.7309 14.969 18.5667 16 18.5667Z" fill="#333333"/>
                 </svg>
             </div>
-            <div className="flex w-340 h-10 justify-center text-center bg-slate-100 rounded-lg m-2 py-2">
+            <div className="flex w-340 h-10 justify-center text-center bg-slate-100 rounded-lg m-2 pt-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12" fill="none">
                     <path d="M7.66005 1.94C7.58862 1.93938 7.51817 1.95657 7.45505 1.99L3.92505 3.78C3.67222 3.91401 3.39116 3.98599 3.10505 3.99H2.60505C2.26024 4.01031 1.93535 4.15826 1.69368 4.40503C1.452 4.65179 1.31086 4.9797 1.29775 5.32485C1.28465 5.67 1.40051 6.00767 1.62278 6.27206C1.84504 6.53644 2.15778 6.70861 2.50005 6.755V9.89C2.49418 9.93845 2.49866 9.9876 2.5132 10.0342C2.52773 10.0808 2.55198 10.1238 2.58435 10.1603C2.61672 10.1968 2.65648 10.2261 2.70098 10.2461C2.74549 10.2661 2.79374 10.2765 2.84255 10.2765C2.89135 10.2765 2.9396 10.2661 2.98411 10.2461C3.02862 10.2261 3.06837 10.1968 3.10074 10.1603C3.13311 10.1238 3.15736 10.0808 3.1719 10.0342C3.18643 9.9876 3.19091 9.93845 3.18505 9.89V6.78C3.44424 6.79425 3.69701 6.86599 3.92505 6.99L7.45505 8.78C7.51817 8.81344 7.58862 8.83062 7.66005 8.83C7.72046 8.82935 7.78014 8.8168 7.8357 8.79308C7.89126 8.76936 7.94161 8.73492 7.98386 8.69174C8.02611 8.64856 8.05944 8.59749 8.08195 8.54142C8.10446 8.48536 8.11571 8.42541 8.11505 8.365V2.405C8.11571 2.34459 8.10446 2.28465 8.08195 2.22858C8.05944 2.17252 8.02611 2.12144 7.98386 2.07826C7.94161 2.03508 7.89126 2.00065 7.8357 1.97692C7.78014 1.9532 7.72046 1.94066 7.66005 1.94ZM7.42505 7.94L4.23505 6.34C3.88481 6.16251 3.49769 6.07002 3.10505 6.07H2.60505C2.42072 6.07 2.24395 5.99678 2.11361 5.86644C1.98327 5.7361 1.91005 5.55933 1.91005 5.375C1.91005 5.19068 1.98327 5.0139 2.11361 4.88356C2.24395 4.75323 2.42072 4.68 2.60505 4.68H3.10505C3.49751 4.67851 3.8843 4.5861 4.23505 4.41L7.42505 2.785V7.94Z" fill="#333333"/>
                     <path d="M10.4051 5.02501H9.03005C8.93723 5.02501 8.8482 5.06188 8.78257 5.12752C8.71693 5.19316 8.68005 5.28218 8.68005 5.37501C8.68005 5.46784 8.71693 5.55686 8.78257 5.6225C8.8482 5.68813 8.93723 5.72501 9.03005 5.72501H10.4051C10.4979 5.72501 10.5869 5.68813 10.6525 5.6225C10.7182 5.55686 10.7551 5.46784 10.7551 5.37501C10.7551 5.28218 10.7182 5.19316 10.6525 5.12752C10.5869 5.06188 10.4979 5.02501 10.4051 5.02501Z" fill="#333333"/>
@@ -69,29 +69,35 @@ export default function Index() {
                 </svg>
                 <p className="text-black text-center">希望価格を2名が登録中</p>
             </div>
-            {item.status === "sold" ? (
-                <p className="text-black text-center" >売れました</ p>
-            ) : item.status === "on sale" ? (
-                <p className="text-black text-center" >出品中です</ p>
-            ) : item.status === "hold" ? (
-                <p className="text-black text-center" >出品しますか？</ p>
-            ) : (
-                <div></div>
-            )}
-
-            <div className="font-type text-black text-center">価値推移図</div>
-                <Image
-                    src="/images/資産総額推移.png" // Replace with the actual image source
-                    className="mx-auto w-250 h-100 mt-6 rounded-lg shadow-xl"
-                    width={100}
-                    height={100}
-                    alt="Picture of the author"
-                />
-            <p className="font-type text-black text-left" >類似商品</ p>
-            <div className="grid grid-cols-3 gap-4 p-2">
+            <div className="px-1 font-type1 border-l-4 border-mercari-red  text-black text-center">
+              <h2 className="text-left font-type font-bold text-black text-2xl normal-bold text-opacity-80 pt-3 px-3">残高<span className="text-xl font-light px-1">(売上金を含む)</span></h2>
+              <h2 className="text-left font-type font- text-black text-2xl semi-normal text-opacity-80 pt-1 px-3"> 
+              <span className="text-base font-light px-1">¥</span>15,000<span className="text-base font-light mx-1">(税込)</span>
+              </h2>
+            </div>
+            <div className="px-1 font-type1 border-l-4 border-mercari-gray  text-black text-center my-2">
+              <h2 className="text-left font-type font-bold text-black text-lg semi-bold text-opacity-80 pt-3 px-3" >取引履歴</h2>
+              <h2 className="text-left font-type font- text-black text-2xl semi-normal text-opacity-80 pt-1 px-3"> 
+              <span className="text-base font-light px-1">¥</span>750<span className="text-base font-light mx-1">(税込)</span>
+              </h2>
+            </div>
+            <p className="mt-5 px-2 font-type1 text-black font-semibold first-letter text-left border-b-2 ">類似商品</ p>
+                <div className="grid grid-cols-3 gap-4 p-2">
                 <Item item={item} showPrice={true} />
                 <Item item={item2} showPrice={true} />
                 <Item item={item3} showPrice={true} />
+            </div>
+            <div className="my-20">
+            </div>
+            <div className="flex items-center justify-center">
+              <button
+                  className="fixed h-42 bottom-2 left-2 right-2 cursor-pointer mx-auto bg-mercari-red text-white text-light px-4 py-2 rounded-md"
+                  onClick={() => {
+                  // Handle search button click
+                  }}
+              >
+                  出品する
+              </button>
             </div>
         </Layout>
     );

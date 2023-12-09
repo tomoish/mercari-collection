@@ -6,6 +6,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setItem } from "../lib/features/item/itemSlice";
 
+// import from ItemProducts
+import { ItemNC1, ItemNC2, ItemNC3, ItemNC4, ItemNC5, ItemNC6, ItemNC7, ItemNC8, ItemNC9, ItemNC10, ItemNC11, ItemNC12, Poke1,  Poke2, Poke3, Poke4, Poke5, Poke6, Poke7, Poke8, Poke9, Poke10 } from "@/components/items/ItemProducts";
+
 export default function Index() {
   // const uid = useSelector((state: any) => state.uid.value);
   const user_data = useSelector((state: any) => state.user.value);
@@ -40,90 +43,6 @@ export default function Index() {
     }
   };
 
-  const item: ItemType = {
-    id: 0,
-    name: "乃木コレ 齋藤飛鳥SSR",
-    status: "",
-    url: "/images/乃木コレ_齋藤飛鳥SSR.jpg",
-    price: 21000,
-  };
-  const item2: ItemType = {
-    id: 0,
-    name: "乃木コレ 賀喜遥香SSR",
-    status: "",
-    url: "/images/乃木コレ1.jpg",
-    price: 14000,
-  };
-  const item3: ItemType = {
-    id: 0,
-    name: "乃木コレ 齋藤飛鳥SR",
-    status: "",
-    url: "/images/乃木コレ2.jpg",
-    price: 7900,
-  };
-  const item4: ItemType = {
-    id: 0,
-    name: "乃木コレ 中村麗乃",
-    status: "",
-    url: "/images/乃木コレ3.jpg",
-    price: 300,
-  };
-  const item5: ItemType = {
-    id: 0,
-    name: "乃木コレ 五百城茉央",
-    status: "sold",
-    url: "/images/乃木コレ4.jpeg",
-    price: 600,
-  };
-  const item6: ItemType = {
-    id: 0,
-    name: "乃木コレ 伊藤理々杏SSR",
-    status: "sold",
-    url: "/images/乃木コレ5.jpg",
-    price: 3900,
-  };
-  const item7: ItemType = {
-    id: 0,
-    name: "乃木コレ 賀喜遥香SSR",
-    status: "",
-    url: "/images/乃木コレ11.jpg",
-    price: 14000,
-  };
-  const item8: ItemType = {
-    id: 0,
-    name: "乃木コレ 五百城茉央SR",
-    status: "sold",
-    url: "/images/乃木コレ7.jpg",
-    price: 2200,
-  };
-  const item9: ItemType = {
-    id: 0,
-    name: "乃木コレ 池田瑛紗",
-    status: "",
-    url: "/images/乃木コレ8.jpg",
-    price: 580,
-  };
-  const item10: ItemType = {
-    id: 0,
-    name: "乃木コレ 池田瑛紗",
-    status: "sold",
-    url: "/images/乃木コレ9.jpg",
-    price: 580,
-  };
-  const item11: ItemType = {
-    id: 0,
-    name: "乃木コレ 池田瑛紗",
-    status: "",
-    url: "/images/乃木コレ10.jpg",
-    price: 580,
-  };
-  const item12: ItemType = {
-    id: 0,
-    name: "乃木コレ 山下美月SSR",
-    status: "",
-    url: "/images/乃木コレ12.jpg",
-    price: 16000,
-  };
   return (
     <Layout title="home">
         <div className="pt-10 flex items-center justify-center">
@@ -194,20 +113,20 @@ export default function Index() {
       ) : (
         <p>Loading...</p>
       )}
-      {/* <div className="grid grid-cols-3 gap-4 p-2">
-        <Item item={item} showPrice={false} />
-        <Item item={item2} showPrice={false} />
-        <Item item={item3} showPrice={false} />
-        <Item item={item4} showPrice={false} />
-        <Item item={item5} showPrice={false} />
-        <Item item={item6} showPrice={false} />
-        <Item item={item7} showPrice={false} />
-        <Item item={item8} showPrice={false} />
-        <Item item={item9} showPrice={false} />
-        <Item item={item10} showPrice={false} />
-        <Item item={item11} showPrice={false} />
-        <Item item={item12} showPrice={false} />
-      </div> */}
+      <div className="grid grid-cols-3 gap-4 p-2">
+        <Item item={ItemNC1} showPrice={true} />
+        <Item item={ItemNC2} showPrice={true} />
+        <Item item={ItemNC3} showPrice={true} />
+        <Item item={ItemNC4} showPrice={true} />
+        <Item item={ItemNC5} showPrice={true} />
+        <Item item={ItemNC6} showPrice={true} />
+        <Item item={ItemNC7} showPrice={true} />
+        <Item item={ItemNC8} showPrice={true} />
+        <Item item={ItemNC9} showPrice={true} />
+        <Item item={ItemNC10} showPrice={true} />
+        <Item item={ItemNC11} showPrice={true} />
+        <Item item={ItemNC12} showPrice={true} />
+      </div>
     </Layout>
   );
 }
